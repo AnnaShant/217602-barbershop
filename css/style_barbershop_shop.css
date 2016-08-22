@@ -49,15 +49,49 @@ body {
     margin-right: 20px;
 }
 
+.product_container {
+    float: right;
+    clear: right;
+    min-width: 700px;
+    min-height: 600px;
+}
+
 .product {
-    float: left;
     width: 220px;
     height: 290px;
     margin-left: 20px;
 }
 
-.product:last-child {
-    margin-right: 20px;
+.product_3:last-child {
+    margin-right: 0;
+}
+
+.product_6:last-child {
+    margin-right: 0;
+}
+
+.product_1 {
+    float: left;
+}
+
+.product_2 {
+    float: left;
+}
+
+.product_3 {
+    float: right;
+}
+
+.product_4 {
+    float: left;
+}
+
+.product_5 {
+    float: left;
+}
+
+.product_6 {
+    float: right;
 }
 
 .pages_button {
