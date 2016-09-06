@@ -187,7 +187,9 @@ a {
     height: 20px;
     margin-left: -10px;
     background-color: #f7f4f1;
-    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
 }
 
 .features_item p {
@@ -428,7 +430,9 @@ input:-ms-input-placeholder {
     width: 8px;
     height: 8px;
     background-color: black;
-    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
 }
 
 .breadcrumbs_active a {
@@ -745,7 +749,9 @@ input:disabled + label {
     width: 8px;
     height: 8px;
     background-color: #000000;
-    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
 }
 
 /*Price*/
@@ -825,7 +831,9 @@ input:disabled + label {
     width: 8px;
     height: 8px;
     background-color: #000000;
-    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
 }
 
 .prices_table {
@@ -918,6 +926,8 @@ input:disabled + label {
     vertical-align: top;
     text-decoration: none;
     background: #000000 url("../img/sprite_social.png") no-repeat;
+    -webkit-transition: background-position 0.5s,
+                background-color 0.5s;
     transition: background-position 0.5s,
                 background-color 0.5s;
 }
@@ -972,17 +982,30 @@ input:disabled + label {
 
 /*Окно карты*/
 
+@-webkit-keyframes show {
+  0% {-webkit-transform: translateY(-2000px);transform: translateY(-2000px);}
+  70% {-webkit-transform: translateY(30px);transform: translateY(30px);}
+  90% {-webkit-transform: translateY(-10px);transform: translateY(-10px);}
+  100% {-webkit-transform: translateY(0);transform: translateY(0);}
+}
+
 @keyframes show {
-  0% {transform: translateY(-2000px);}
-  70% {transform: translateY(30px);}
-  90% {transform: translateY(-10px);}
-  100% {transform: translateY(0);}
+  0% {-webkit-transform: translateY(-2000px);transform: translateY(-2000px);}
+  70% {-webkit-transform: translateY(30px);transform: translateY(30px);}
+  90% {-webkit-transform: translateY(-10px);transform: translateY(-10px);}
+  100% {-webkit-transform: translateY(0);transform: translateY(0);}
+}
+
+@-webkit-keyframes shake {
+  0%, 100% {-webkit-transform: translateX(0);transform: translateX(0);}
+  10%, 30%, 50%, 70%, 90% {-webkit-transform: translateX(-10px);transform: translateX(-10px);}
+  20%, 40%, 60%, 80% {-webkit-transform: translateX(10px);transform: translateX(10px);}
 }
 
 @keyframes shake {
-  0%, 100% {transform: translateX(0);}
-  10%, 30%, 50%, 70%, 90% {transform: translateX(-10px);}
-  20%, 40%, 60%, 80% {transform: translateX(10px);}
+  0%, 100% {-webkit-transform: translateX(0);transform: translateX(0);}
+  10%, 30%, 50%, 70%, 90% {-webkit-transform: translateX(-10px);transform: translateX(-10px);}
+  20%, 40%, 60%, 80% {-webkit-transform: translateX(10px);transform: translateX(10px);}
 }
 
 .modal_map {
@@ -1002,7 +1025,8 @@ input:disabled + label {
 
 .modal_open {
     display: block;
-    animation: show 0.5s;
+    -webkit-animation: show 0.5s;
+            animation: show 0.5s;
 }
 
 .inner_map_wrapper {
@@ -1051,11 +1075,15 @@ input:disabled + label {
 }
 
 .modal_close::before {
-    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
 }
 
 .modal_close::after {
-    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
 }
 
 .modal_overlay {
@@ -1093,7 +1121,8 @@ input:disabled + label {
 
 .modal_login_show {
     display: block;
-    animation: show 0.6s;
+    -webkit-animation: show 0.6s;
+            animation: show 0.6s;
 }
 
 .inner_login {
@@ -1104,7 +1133,8 @@ input:disabled + label {
 }
 
 .modal_error {
-    animation: shake 0.6s;
+    -webkit-animation: shake 0.6s;
+            animation: shake 0.6s;
 }
 
 .modal_login h2 {
